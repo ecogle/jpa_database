@@ -1,0 +1,26 @@
+[1mdiff --git a/src/main/resources/META-INF/persistence.xml b/src/main/resources/META-INF/persistence.xml[m
+[1mindex 8196637..7fffa34 100644[m
+[1m--- a/src/main/resources/META-INF/persistence.xml[m
+[1m+++ b/src/main/resources/META-INF/persistence.xml[m
+[36m@@ -17,7 +17,7 @@[m [mversion="1.0">[m
+ 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/my_backend_db" />[m
+ 			<property name="javax.persistence.jdbc.user" value="dbuser" />[m
+ 			<property name="javax.persistence.jdbc.password" value = "rikerman"/>[m
+[31m-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />[m
+[32m+[m			[32m<property name="eclipselink.ddl-generation" value="create-tables" />[m
+ 			<property name="eclipselink.ddl-generation.output-mode" value="database" />[m
+ 		</properties>[m
+ </persistence-unit>[m
+[1mdiff --git a/target/classes/META-INF/persistence.xml b/target/classes/META-INF/persistence.xml[m
+[1mindex 8196637..7fffa34 100644[m
+[1m--- a/target/classes/META-INF/persistence.xml[m
+[1m+++ b/target/classes/META-INF/persistence.xml[m
+[36m@@ -17,7 +17,7 @@[m [mversion="1.0">[m
+ 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/my_backend_db" />[m
+ 			<property name="javax.persistence.jdbc.user" value="dbuser" />[m
+ 			<property name="javax.persistence.jdbc.password" value = "rikerman"/>[m
+[31m-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />[m
+[32m+[m			[32m<property name="eclipselink.ddl-generation" value="create-tables" />[m
+ 			<property name="eclipselink.ddl-generation.output-mode" value="database" />[m
+ 		</properties>[m
+ </persistence-unit>[m
