@@ -123,7 +123,12 @@ public class Person {
 	
 	@Override
 	public String toString(){
-		return this.firstName + " " + this.lastName + "  " + this.primaryEmail;
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.firstName + " " + this.lastName + "  " + this.primaryEmail + "\n");
+		for (Tools t : tools){
+			sb.append("\t"+ t.getToolName() + "\n");
+		}
+		return sb.toString();
 	}
 
 	
