@@ -1,7 +1,10 @@
 package com.ecogle.MyDatabaseProject;
 
+import java.io.Console;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -20,6 +23,7 @@ public class App{
 	
     public static void main( String[] args )
     {
+    	
     	EntityManagerFactory emf = Persistence.createEntityManagerFactory(P_U);
     	EntityManager em = emf.createEntityManager();
     	Tools wrench = new Tools();
@@ -45,5 +49,21 @@ public class App{
     	TypedQuery<Person>people = em.createQuery("select o from Person o", Person.class);
     	people.getResultList().forEach(System.out::println);
         em.close();
+        //showMenu();
+        
+    }
+    
+    public static void showMenu(){
+    	print("1.  Add Tools");
+    	print("2.  Add People");
+    	print("3. (Q)uit");
+    	
+    	Scanner in = new Scanner(System.in);
+    	
+    	
+    }
+    
+    public static void print(String s){
+    	System.out.println(s);
     }
 }
